@@ -1,0 +1,119 @@
+.input {
+  font-weight: 500;
+  font-size: 14px;
+  color: #333;
+  letter-spacing: 0;
+  line-height: 14px;
+  background: #FFFFFF;
+  box-shadow: 0 8px 16px 0 rgba(218,228,241,0.60);
+  border-radius: 5px;
+  padding-left: 15px;
+  padding-right: 40px;
+  border: none;
+  height: 50px;
+  outline: none;
+  &--full-width {
+    width: 100%;
+  }
+  &--fillable {
+    padding-top: 18px;
+  }
+  &--profile {
+    color: #333333;
+  }
+  &--search {
+    box-shadow: none;
+  }
+  &--login {
+    border: 1px solid #E4EAF0;
+    background-clip: padding-box;
+  }
+  &--search-page {
+    height: 60px;
+    padding-left: 25px;
+    &::-webkit-input-placeholder {
+      color: #889FBC;
+      font-weight: 400;
+    }
+    &::-moz-placeholder {
+      color: #889FBC;
+      font-weight: 400;
+    }
+    &:-ms-input-placeholder {
+      color: #889FBC;
+      font-weight: 400;
+    }
+    &:-moz-placeholder {
+      color: #889FBC;
+      font-weight: 400;
+    }
+  }
+  &--error {
+    position: relative;
+    //color: #FF4A61;
+    //position: relative;
+    //background-image: url('/app-icons/icon__close-error.svg');
+    background-size: 10px;
+    background-repeat: no-repeat;
+    background-position: calc(~'100% - 20px') 50%;
+    border-bottom: 2px solid #FF4A61;
+  }
+  &--error:focus,
+  &--error&--remarked {
+      border-bottom-color: transparent;
+  }
+
+  &--success {
+    background-image: url('/app-icons/icon__success-input.svg');
+    background-size: 10px;
+    background-repeat: no-repeat;
+    background-position: calc(~'100% - 20px') 50%;
+    border-bottom: 2px solid #02CFB6;
+  }
+  &--price {
+    position: relative;
+    padding-right: 50px;
+    color: #333;
+    background-image: url('/app-icons/icon__rouble.svg');
+    background-repeat: no-repeat;
+    background-position: right 5px;
+    background-size: 50px;
+    }
+  &--phone {
+
+    &:focus::-webkit-input-placeholder {
+      color: #000;
+      font-weight: 500;
+    }
+    &:focus::-moz-placeholder {
+      color: #000;
+      font-weight: 500;
+    }
+    &:focus:-ms-input-placeholder {
+      color: #000;
+      font-weight: 500;
+    }
+    &:focus:-moz-placeholder {
+      color: #000;
+      font-weight: 500;
+    }
+  }
+  &--phone::-webkit-input-placeholder {
+    color: #fff;
+  }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+@media (min-width: 767px) {
+  .input {
+    border: 1px solid #E4EAF0;
+    &--error {
+
+      border-bottom: 2px solid #FF4A61;
+    }
+  }
+}

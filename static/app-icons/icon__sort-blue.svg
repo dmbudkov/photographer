@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>set</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="s_min" transform="translate(-30.000000, -20.000000)">
+            <g id="set" transform="translate(31.000000, 20.500000)">
+                <g id="arrow">
+                    <rect id="Rectangle-2" fill="#889FBC" x="2.5" y="0.712489589" width="2" height="16" rx="1"></rect>
+                    <polyline id="Line-2" stroke="#889FBC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="0.5 15 3.5 18 6.5 15"></polyline>
+                </g>
+                <g id="arrow" transform="translate(14.500000, 10.000000) scale(1, -1) translate(-14.500000, -10.000000) translate(11.000000, 1.000000)">
+                    <rect id="Rectangle-2" fill="#889FBC" x="2.5" y="0.712489589" width="2" height="16" rx="1"></rect>
+                    <polyline id="Line-2" stroke="#889FBC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="0.5 15 3.5 18 6.5 15"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

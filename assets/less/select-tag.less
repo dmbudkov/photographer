@@ -1,0 +1,116 @@
+.select-tag {
+  cursor: pointer;
+  &__input {
+    display: none;
+  }
+  &__label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #FFFFFF;
+    border: 1px solid transparent;
+    box-shadow: 0 8px 16px 0 rgba(218,228,241,0.40);
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 13px;
+    color: #333333;
+    letter-spacing: 0;
+    line-height: 15px;
+    height: 40px;
+    padding-left: 15px;
+    padding-right: 10px;
+    cursor: pointer;
+  }
+  &__input:checked + &__label {
+    background-color: #02CFB6;
+    border-color: #02CFB6;
+    color: #fff;
+  }
+  &__input:disabled + &__label > &__type {
+    opacity: 0.4;
+  }
+  &__input:disabled + &__label {
+    cursor: default;
+  }
+  &__input:checked + &__label  &__quantity {
+    color: #fff;
+  }
+  &__type {
+    padding-right: 4px;
+  }
+  &__quantity {
+    color: #889fbc;
+  }
+   &--with-closer {
+     height: 30px;
+     margin-bottom: 0;
+     position: relative;
+     .select-tag__label {
+       background: rgba(136,159,188,0.50);
+       border-radius: 3px;
+       box-shadow: none;
+       padding-right: 30px;
+       white-space: nowrap;
+       padding-left: 10px;
+       height: 100%;
+       font-size: 11px;
+       color: #FFFFFF;
+       line-height: 32px;
+     }
+     .select-tag__item-close {
+       position: absolute;
+       right: 0;
+       top: 0;
+       width: 30px;
+       height: 30px;
+       &::after,
+       &::before {
+         content: '';
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         margin-left: -5.5px;
+         display: block;
+         width: 11px;
+         height: 2px;
+         background-color: #fff;
+         transform: rotate(45deg);
+       }
+       &::before {
+         transform: rotate(-45deg);
+       }
+     }
+     &:last-of-type {
+       .select-tag__item-close {
+         right: 20px;
+       }
+     }
+   }
+  &--wide {
+    .select-tag__label {
+      height: 50px;
+      font-size: 14px;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        display: block;
+        height: 18px;
+        width: 18px;
+        border-radius: 50%;
+        border: 2px solid #EDF0F4;
+        margin-top: -9px;
+      }
+    }
+    .select-tag__input:checked + .select-tag__label::after {
+      background-image: url(~/app-icons/icon__check.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 14px 10px;
+      border-color: transparent;
+    }
+  }
+
+}

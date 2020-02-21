@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="60px" viewBox="0 0 50 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>marker_icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="marker_icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M25,38.5752937 C30.349234,33.0824605 33,28.8413989 33,26 C33,21.581722 29.418278,18 25,18 C20.581722,18 17,21.581722 17,26 C17,28.8413989 19.650766,33.0824605 25,38.5752937 Z" id="Oval" stroke="#889FBC" stroke-width="2"></path>
+        <rect id="Rectangle" fill="#889FBC" x="20" y="39" width="10" height="2" rx="1"></rect>
+        <circle id="Oval" stroke="#889FBC" stroke-width="2" cx="25" cy="26" r="3"></circle>
+    </g>
+</svg>

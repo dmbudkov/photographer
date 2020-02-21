@@ -1,0 +1,107 @@
+.date {
+  margin-bottom: 30px;
+  &__element-holder {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+  }
+  &__name {
+
+    font-weight: 400;
+    font-size: 14px;
+    color: #333333;
+    letter-spacing: 0;
+    line-height: 40px;
+  }
+  &__element {
+    margin-right: 10px;
+    background: #FFFFFF;
+    box-shadow: 0 8px 16px 0 rgba(218,228,241,0.40);
+    border-radius: 5px;
+    height: 50px;
+    width: 30%;
+    position: relative;
+    &::after {
+      content: '';
+      display: block;
+      width: 8px;
+      height: 19px;
+      position: absolute;
+      top: 17px;
+      right: 15px;
+      background-image: url('/app-icons/icon__select-arrows.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    select {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 50px;
+      z-index:  12;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      text-indent: 1px;
+      text-overflow: '';
+      outline: none !important;
+      padding-bottom: 11px !important;
+      color: transparent !important;
+      font-weight: 300 !important;
+      background-color: transparent !important;
+      border: none !important;
+      border-radius: 0px !important;
+      padding-left: 11px !important;
+      padding-right: 40px !important;
+      &:focus {
+        outline: none !important;
+      }
+    }
+  }
+  &__element:last-of-type {
+    margin-right: 0;
+  }
+  &__element-label {
+    display: block;
+    position: relative;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding-right: 25px;
+    z-index: 1;
+    height: 100px;
+    width: 100%;
+    font-weight: 500;
+    font-size: 14px;
+    color: #889FBC;
+    letter-spacing: 0;
+    padding-left: 15px;
+    line-height: 50px;
+  }
+  &__element-label::after {
+
+  }
+  &__el:last-of-type {
+    margin-left: 0;
+  }
+  &__element-text {
+  }
+}
+
+@media (min-width: 767px) {
+  .date {
+    &__element {
+      border: 1px solid #E4EAF0;
+      select option {
+        color: #000;
+      }
+      &::after {
+        opacity: 0.5;
+      }
+    }
+    &__element-label {
+      color: #000;
+    }
+  }
+}

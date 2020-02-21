@@ -1,0 +1,105 @@
+.cabinet {
+  position: relative;
+  cursor: pointer;
+  //background-image: url(/static/app-icons/icon__pie.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  font-size: 0;
+  &__desktop-img {
+    display: none;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+
+  }
+  &__user-name {
+    display: none;
+    position: absolute;
+    left: calc(~'100% + 15px');
+    top: 0;
+    font-weight: 500;
+    font-size: 16px;
+    color: #333333;
+    letter-spacing: 0;
+    line-height: 50px;
+  }
+  &__user-logout {
+    display: none;
+  }
+  &--logged {
+    //background-image: url(/static/app-icons/icon__user.svg);
+    background-repeat: no-repeat;
+    background-size: 174px 176px;
+    background-position: -70px -38px;
+  }
+}
+
+@media (min-width: 767px) {
+  .cabinet {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 20px;
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      margin-top: -7px;
+      transition:  .3s ease;
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-color: #889fbc;
+      border-style: solid;
+      border-top-width: 0px;
+      border-right-width: 0px;
+      border-bottom-width: 2px;
+      border-left-width: 2px;
+      transform: rotate(-45deg);
+    }
+    &--active {
+      &::after {
+        transform: rotate(135deg);
+        transition:  .3s ease;
+        margin-top: -2px;
+      }
+    }
+    &--empty {
+      &::after {
+        display: none;
+      }
+    }
+    svg {
+      display: none;
+    }
+    &__desktop-img {
+      display: block;
+      margin-right: 7px;
+    }
+    &__user-name {
+      position: relative;
+      color: #fff;
+      line-height: 13px;
+      font-size: 13px;
+      top: auto;
+      left: auto;
+      display: block;
+    }
+    &__user-logout {
+      display: block;
+      cursor: pointer;
+      line-height: 14px;
+      font-size: 14px;
+      font-weight: 500;
+      color: fade(#fff, 50%);
+      margin-left: 25px;
+
+    }
+  }
+}

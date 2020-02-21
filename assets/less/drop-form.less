@@ -1,0 +1,84 @@
+.drop-form {
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  &--scrollable {
+    min-height: 100vh;
+  }
+  &__photo {
+    min-height: 150px;
+  }
+  &__textarea {
+    display: block;
+    height: 140px;
+    min-height: 140px;
+    margin-bottom: 15px;
+  }
+  &__input {
+    margin-bottom: 20px;
+  }
+  &__button-holder {
+    margin-top: auto;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 20;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    //margin-bottom: 40px;
+    //margin-left: -30px;
+    //margin-right: -30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    button {
+      max-width: 246px;
+      width: 100%;
+      height: 50px;
+      margin-left: auto;
+      margin-right: auto;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 50px;
+      color: #FFFFFF;
+      letter-spacing: 0;
+    }
+    button:nth-of-type(2) {
+      margin-left: 12px;
+    }
+  }
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #889FBC;
+    font-weight: 400;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: #889FBC;
+    font-weight: 400;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: #889FBC;
+    font-weight: 400;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: #889FBC;
+    font-weight: 400;
+  }
+}
+@media (min-width: 767px) {
+  .drop-form {
+    width: 100%;
+    &--scrollable {
+      min-height: auto;
+    }
+    &__button-holder {
+      margin-bottom: 0;
+      position: static;
+    }
+  }
+}

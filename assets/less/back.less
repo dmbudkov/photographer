@@ -1,0 +1,28 @@
+.back {
+  width: 40px;
+  height: 40px;
+  background-image: url('/app-icons/icon__back-arrow.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 14px 22px;
+  cursor: pointer;
+  &--black {
+    background-image: url('/app-icons/icon__back-arrow-black.svg');
+  }
+  &--small {
+    background-size: 10px 14px;
+  }
+}
+@media (min-width: 767px) {
+  .back {
+    &--round {
+      background-color: #02CFB6;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-image: url('/app-icons/icon__back-arrow.svg');
+      background-size: 10px 15px;
+      background-position: 9px center;
+    }
+  }
+}

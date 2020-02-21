@@ -1,0 +1,106 @@
+.video {
+  //min-height: 320px;
+  position: relative;
+  overflow: hidden;
+  //min-height: 220px;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: #000;
+  background-position: center;
+  &__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    box-shadow: 0 25px 70px 0 rgba(0, 0, 0, 0.10);
+    background: rgba(0, 0, 0, 0.30);
+  }
+  &__description {
+    position: absolute;
+    font-weight: 400;
+    font-size: 14px;
+    color: #fff;
+    letter-spacing: 0;
+    line-height: 14px;
+    margin-top: 8px;
+    bottom: 52px;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+  &__play-button {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 70px;
+    height: 70px;
+    margin-left: -35px;
+    margin-top: -35px;
+    border: 3px solid #02CFB6;
+    border-radius: 50%;
+    background-image: url('/app-icons/icon__play.svg');
+    //background-size: 24px 30px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: none;  // comment when fixes
+  }
+  &__frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  &__frame-holder {
+    position: relative;
+    z-index:  5;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 45px;
+    height: 0;
+    border-radius: 10px;
+    overflow: hidden;
+   
+  }
+
+  &__settings {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #02CFB6;
+  }
+  &__player {
+    display: block;
+    width: 100%;
+  }
+  &--add {
+    background-image: linear-gradient(122deg, #8434F6 0%, #5873EB 100%);
+    box-shadow: 0 8px 16px 0 rgba(67, 36, 149, 0.10);
+    border-radius: 10px;
+    .video__play-button {
+      display: block;
+      margin-top: 0;
+      top: 52px;
+    }
+    &::after {
+      opacity: 0.4;
+    }
+    &::before {
+      opacity: 0.2;
+    }
+    &::after,
+    &::before {
+      background-image: linear-gradient(122deg, #8434F6 0%, #5873EB 100%);
+    }
+  }
+}

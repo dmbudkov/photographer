@@ -1,0 +1,78 @@
+<template>
+    <div class="wrapper">
+        <div class="page-wrapper page-wrapper--sub">
+            <page-header></page-header>
+
+            <main class="main main--404">
+                <div class="main__background main__background--short">
+                    <div class="main__logo">
+                        <svg width="268px" height="190px" viewBox="0 0 268 190" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                             xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+                            <title>Combined Shape</title>
+                            <desc>Created with Sketch.</desc>
+                            <defs>
+                                <linearGradient x1="139.039332%" y1="6.48995536%" x2="0%" y2="100%" id="linearGradient-1">
+                                    <stop stop-color="#00ADFF" offset="0%"></stop>
+                                    <stop stop-color="#06F6E1" offset="100%"></stop>
+                                </linearGradient>
+                                <linearGradient x1="3.00128483%" y1="98.0970982%" x2="136.164585%" y2="3.046875%" id="linearGradient-2">
+                                    <stop stop-color="#02DAB1" offset="0%"></stop>
+                                    <stop stop-color="#FF027D" offset="100%"></stop>
+                                </linearGradient>
+                                <path d="M0.00647789026,26.162599 C0.542118441,9.5577419 13.040398,3.48714899 13.040398,3.48714899 C26.9670523,-5.61874038 47.4999401,5.98680489 47.4999401,5.98680489 C47.4999401,5.98680489 227.122201,74.5487954 246.226714,83.4761379 C254.796962,87.5827155 260.867555,91.689293 263.902852,97.7598859 C267.652336,105.080307 267.295242,114.54329 267.295242,121.685164 C267.295242,134.540537 267.295242,222.271247 267.295242,244.23251 C267.295242,252.624212 265.68832,259.587539 262.831571,264.229757 C258.189353,271.550178 251.583119,273.69274 251.583119,273.69274 C251.583119,273.69274 49.4639554,372.967542 42.3220814,376.181385 C35.3587542,379.395228 24.1103027,382.609072 12.8618511,376.717026 C-0.707709511,369.575152 0.00647789026,363.863029 0.00647789026,353.863029 L0.00647789026,26.162599 Z M45.0415053,217.602384 C45.0415053,223.137336 45.2200522,326.044529 45.2200522,326.044529 C45.2200522,326.044529 44.5058648,332.472215 49.6837234,335.864606 C54.8615821,339.256996 59.8608939,335.686059 59.8608939,335.686059 C59.8608939,335.686059 226.980746,259.08946 235.015354,255.339976 C243.228509,251.411945 243.407056,243.912978 243.407056,239.092213 C243.407056,234.271448 243.407056,141.184332 243.407056,127.079131 C243.407056,112.97393 230.373136,117.794694 230.373136,117.794694 C219.481778,121.008538 210.911529,137.613395 193.949578,144.041081 C177.166175,150.468768 172.88105,142.43416 158.240208,147.969112 C143.599367,153.504065 135.921852,175.822421 114.317683,186.356685 C92.7135143,196.890949 76.8228447,182.250107 60.2179876,189.213435 C43.4345837,196.176762 45.0415053,212.067431 45.0415053,217.602384 Z"
+                                      id="path-3"></path>
+                            </defs>
+                            <g id="main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="фирменный-градиент">
+                                    <g>
+                                        <g id="logo_min" transform="translate(0.000000, -45.000000)">
+                                            <mask id="mask-4" fill="white">
+                                                <use xlink:href="#path-3"></use>
+                                            </mask>
+                                            <g id="Combined-Shape" fill-rule="nonzero">
+                                                <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-3"></use>
+                                                <use fill="url(#linearGradient-2)" fill-rule="evenodd" xlink:href="#path-3"></use>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <vendor-types :specialities="$store.state.specialities"></vendor-types>
+                <section class="main__container ">
+                    <h1 v-if="error.statusCode === 404">Ошибка</h1>
+                    <h1 v-else>Что-то пошло не так...</h1>
+                    <p  v-if="error.statusCode === 404">Неправильно набран адрес, или такой <br>
+                        страницы больше не существует</p>
+                    <nuxt-link to="/" class="main__container-button button button--aqua">На главную</nuxt-link>
+                </section>
+            </main>
+        </div>
+        <page-footer class="page-footer--404"></page-footer>
+    </div>
+
+    <!--<div class="container">-->
+        <!--<h1 v-if="error.statusCode === 404"></h1>-->
+        <!--<h1 v-else>An error occurred</h1>-->
+        <!--<nuxt-link to="/">Home page</nuxt-link>-->
+    <!--</div>-->
+</template>
+
+<script>
+    import PageHeader from '~/components/PageHeader/PageHeader.vue';
+    import PageFooter from '~/components/PageFooter.vue';
+    import VendorTypes from "~/components/FilterElements/CatalogVendorType.vue";
+
+    export default {
+        components: {
+            'page-header': PageHeader,
+            'page-footer': PageFooter,
+            'vendor-types': VendorTypes
+        },
+        props: ['error'],
+
+    }
+</script>

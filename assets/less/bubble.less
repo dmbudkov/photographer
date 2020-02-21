@@ -1,0 +1,41 @@
+.bubble {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-width: 138px;
+  box-shadow: 0 -4px 8px 0 rgba(0,0,0,0.08);
+  border-radius: 5px;
+  background-color: #fff;
+  position: absolute;
+  top: 46px;
+  left: -94px;
+  z-index: 100;
+  display: none;
+  &--opened {
+    display: block;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    right: 14px;
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 6px 4px 6px;
+    border-color: transparent transparent #ffffff transparent;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+  &__item {
+    color: #333;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 30px;
+    &--red {
+      color: #ff4a61;
+    }
+  }
+}

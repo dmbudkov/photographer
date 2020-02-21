@@ -1,0 +1,28 @@
+
+<svg width="149px" height="168px" viewBox="0 0 149 168" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path d="M82,18 C56.3334516,-1.10068719 29.0738508,-4.40530862 0.221197623,8.08613571" id="path-1"></path>
+        <filter x="-145.3%" y="-539.8%" width="390.7%" height="1470.5%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="25" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="1" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="25" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="35" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="lk_client_tender_create_tutorial" transform="translate(-127.000000, -139.000000)">
+            <g id="Group-2" transform="translate(59.000000, 189.000000)">
+                <g id="arrow" transform="translate(159.591112, 43.281693) scale(1, -1) rotate(54.000000) translate(-159.591112, -43.281693) translate(115.591112, 31.281693)">
+                    <g id="Line">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use stroke="#FFFFFF" stroke-width="2" xlink:href="#path-1"></use>
+                    </g>
+                    <polyline id="Line-2" stroke="#FFFFFF" stroke-width="2" transform="translate(82.000000, 18.000000) rotate(-53.000000) translate(-82.000000, -18.000000) " points="77 15.5 82 20.5 87 15.5"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,109 @@
+.city-select {
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+  &__name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: 50px;
+  }
+  &--filter {
+    background: #FFFFFF;
+    box-shadow: 0 8px 16px 0 rgba(218,228,241,0.40);
+    border-radius: 5px;
+    height: 60px;
+    margin-bottom: 10px;
+    position: relative;
+    .city-select__name {
+      color: #333;
+      line-height: 60px;
+      font-weight: 500;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      width: 50px;
+      height: 60px;
+      background-image: url('/app-icons/icon__location.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100%;
+    }
+  }
+  &--black {
+    .city-select__name {
+      color: #333;
+    }
+  }
+}
+@media (min-width: 767px) {
+  .city-select {
+    /* Rectangle 3: */
+    //background: rgba(255,255,255,0.08);
+    //border: 1px solid rgba(255,255,255,0.30);
+    //border-radius: 5px;
+    height: 40px;
+    padding-left: 0;
+    padding-right: 0;
+    min-width: 150px;
+    position: relative;
+    &::after {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 32px;
+      position: absolute;
+      z-index: -1;
+      top: 50%;
+      margin-top: -16px;
+      left: -16px;
+      background-image: url('/app-icons/icon__geo-white.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &__name {
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 40px;
+      padding-left: 15px;
+      padding-right: 20px;
+      //text-transform: uppercase;
+    }
+  }
+
+}
+@media (min-width: 1023px) {
+  .city-select {
+    height: 60px;
+    &--filter {
+      padding-left: 20px;
+      &::after {
+          left: auto;
+          right: -15px;
+          width: 40px;
+          height: 40px;
+          margin: auto;
+          transform: translate3d(-50%, -50%, 0);
+          z-index: 1;
+          background-image: url('/app-icons/icon__geo.svg');
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+      .city-select__name {
+          font-weight: 500;
+          height: 100%;
+          font-size: 16px;
+          line-height: 60px;
+          vertical-align: center;
+          padding-left: 0;
+          padding-right: 0;
+          color: #889FBC;
+        }
+      }
+  }
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-profile__personal</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M11.9989497,11.2975221 C10.4885491,11.2975221 9.23863489,10.0707155 9.23863489,8.5372073 C9.23863489,7.00369909 10.4885491,5.80000019 11.9989497,5.80000019 C13.5093502,5.80000019 14.7592644,7.02680675 14.7592644,8.56031495 C14.7592644,10.0938232 13.5093502,11.2975221 11.9989497,11.2975221 Z M13.8601665,11.9117564 C15.8537271,12.5692743 16.7940079,14.1889111 16.7961086,16.0060133 C16.7961086,16.1670666 16.6497601,16.3134151 16.3570631,16.4450588 C14.9710525,17.1483535 13.518348,17.5000008 11.9989497,17.5000008 C10.4795513,17.5000008 9.02754704,17.1483535 7.6429369,16.4450588 C7.3502399,16.3134151 7.2038914,16.1670666 7.2038914,16.0060133 C7.2038914,14.1889111 8.14417219,12.5692743 10.1377328,11.9117564 C10.2399667,11.8837472 10.3933175,11.9278618 10.5977853,12.0441003 L11.9989497,12.9394354 L13.400114,12.0441003 C13.5905771,11.9264613 13.7439279,11.8823467 13.8601665,11.9117564 Z" id="path-1"></path>
+        <filter x="-802.7%" y="-521.4%" width="1705.5%" height="1416.2%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="16" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="23" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="personal">
+            <g id="Group-2">
+                <circle id="Combined-Shape" fill="#734CF2" fill-rule="nonzero" cx="12" cy="12" r="12"></circle>
+                <g id="Combined-Shape">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

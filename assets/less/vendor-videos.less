@@ -1,0 +1,25 @@
+.vendor-videos {
+  &__item {
+    margin-bottom: 10px;
+    &:last-of-type {
+      margin-bottom: 70px;
+    }
+  }
+}
+@media (min-width: 767px) {
+  .vendor-videos {
+    &--cabinet {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    &__item {
+      min-width: 290px;
+      margin-bottom: 20px;
+      &:last-of-type {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

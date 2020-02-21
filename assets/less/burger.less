@@ -1,0 +1,104 @@
+.burger {
+  position: relative;
+  z-index: 100;
+  right: 0;
+  top: 0;
+  width: 20px;
+  height: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  transform: rotate(0deg);
+  transition: transform .3s ease;
+  transform-origin: center;
+  &__bar {
+    //position: relative;
+    width: 14px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 1px;
+  }
+  &__bar::after {
+    content: '';
+    position: absolute;
+    border-radius: 1px;
+    background-color: #fff;
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 17px;
+    height: 2px;
+    transition: .3s ease;
+    //transition: transform;
+  }
+  &__bar::before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 2px;
+    width: 20px;
+    border-radius: 1px;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    transform: rotate(0);
+    transition: transform .3s ease;
+  }
+
+
+
+
+  &--open {
+    position: fixed;
+    right: 25px;
+    top: 40px;
+    width: 20px;
+    height: 20px;
+    transform: rotate(180deg);
+    transition: transform .7s ease;
+    transition-delay: 1s;
+    .burger__bar {
+      background-color: #000;
+      height: 0;
+    }
+    .burger__bar::after {
+      width: 20px;
+      height: 2px;
+      //top: 0px;
+      //left: 5px;
+      transform: rotate(-45deg);
+      transition: transform .5s;
+      transition-delay: 1s;
+      animation-name: burgerAnimateBottomBar;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      background: #889fbc;
+      transform-origin: center;
+      //transition-property: top, transform;
+      //transition-duration: 0.4s, 0.5s;
+
+
+    }
+    .burger__bar::before {
+      background-color: #889fbc;
+      width: 20px;
+      height: 2px;
+      //left: 5px;
+      animation-name: burgerAnimateTopBar;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      transform: rotate(45deg);
+      transition: transform .5s;
+      transition-delay: 1s;
+      transform-origin: center;
+      //transition-property: top, transform;
+      //transition-duration: 0.4s, 0.5s;
+      //transition-delay: 0s, 1s;
+    }
+  }
+  &--hide {
+    opacity: 0;
+    z-index: -1;
+  }
+}

@@ -1,0 +1,296 @@
+<template>
+    <div class="wrapper">
+        <div class="popup-overlay" v-if="showVendorRecovery" @click="showVendorRecovery = false"></div>
+        <div class="page-wrapper">
+            <page-header class="page-header--cabinet"></page-header>
+            <transition name="fade">
+            <vendor-recovery v-if="showVendorRecovery" @closePopup="handleClosePopup($event)"></vendor-recovery>
+            </transition>
+                <main class="main">
+                <div class="main__background main__background--short">
+                    <div class="main__logo">
+                        <svg width="268px" height="190px" viewBox="0 0 268 190" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                             xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+                            <title>Combined Shape</title>
+                            <desc>Created with Sketch.</desc>
+                            <defs>
+                                <!--<linearGradient x1="139.039332%" y1="6.48995536%" x2="0%" y2="100%" id="linearGradient-1">-->
+
+                                <!--<stop stop-color="#00ADFF" offset="0%">-->
+                                <!--<animate attributeName="stop-color" values="#7A5FFF; #01FF89; #7A5FFF" dur="4s" repeatCount="indefinite"></animate>-->
+                                <!--</stop>-->
+                                <!--<stop stop-color="#06F6E1" offset="100%">-->
+                                <!--<animate attributeName="stop-color" values="#7A5FFF; #01FF89; #7A5FFF" dur="4s" repeatCount="indefinite"></animate>-->
+                                <!--</stop>-->
+                                <!--</linearGradient>-->
+                                <linearGradient x1="3.00128483%" y1="98.0970982%" x2="136.164585%" y2="3.046875%" id="linearGradient-2">
+                                    <stop stop-color="#02DAB1" offset="0%">
+                                        <animate attributeName="stop-color" values="#02DAB1; #FF027D; #02DAB1;" dur="10s" repeatCount="indefinite"></animate>
+                                    </stop>
+
+                                    <stop stop-color="#FF027D" offset="100%">
+                                        <animate attributeName="stop-color" values=" #8334F6; #FF027D; #02DAB1; #8334F6;" dur="10s" repeatCount="indefinite"></animate>
+                                    </stop>
+                                </linearGradient>
+                                <path d="M0.00647789026,26.162599 C0.542118441,9.5577419 13.040398,3.48714899 13.040398,3.48714899 C26.9670523,-5.61874038 47.4999401,5.98680489 47.4999401,5.98680489 C47.4999401,5.98680489 227.122201,74.5487954 246.226714,83.4761379 C254.796962,87.5827155 260.867555,91.689293 263.902852,97.7598859 C267.652336,105.080307 267.295242,114.54329 267.295242,121.685164 C267.295242,134.540537 267.295242,222.271247 267.295242,244.23251 C267.295242,252.624212 265.68832,259.587539 262.831571,264.229757 C258.189353,271.550178 251.583119,273.69274 251.583119,273.69274 C251.583119,273.69274 49.4639554,372.967542 42.3220814,376.181385 C35.3587542,379.395228 24.1103027,382.609072 12.8618511,376.717026 C-0.707709511,369.575152 0.00647789026,363.863029 0.00647789026,353.863029 L0.00647789026,26.162599 Z M45.0415053,217.602384 C45.0415053,223.137336 45.2200522,326.044529 45.2200522,326.044529 C45.2200522,326.044529 44.5058648,332.472215 49.6837234,335.864606 C54.8615821,339.256996 59.8608939,335.686059 59.8608939,335.686059 C59.8608939,335.686059 226.980746,259.08946 235.015354,255.339976 C243.228509,251.411945 243.407056,243.912978 243.407056,239.092213 C243.407056,234.271448 243.407056,141.184332 243.407056,127.079131 C243.407056,112.97393 230.373136,117.794694 230.373136,117.794694 C219.481778,121.008538 210.911529,137.613395 193.949578,144.041081 C177.166175,150.468768 172.88105,142.43416 158.240208,147.969112 C143.599367,153.504065 135.921852,175.822421 114.317683,186.356685 C92.7135143,196.890949 76.8228447,182.250107 60.2179876,189.213435 C43.4345837,196.176762 45.0415053,212.067431 45.0415053,217.602384 Z"
+                                      id="path-3"></path>
+                            </defs>
+                            <g id="main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="фирменный-градиент">
+                                    <g>
+                                        <g id="logo_min" transform="translate(0.000000, -45.000000)">
+                                            <!--<mask id="mask-4" fill="white">-->
+                                            <!--<use xlink:href="#path-3"></use>-->
+                                            <!--</mask>-->
+                                            <g id="Combined-Shape" fill-rule="nonzero">
+                                                <!--<use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-3"></use>-->
+                                                <use fill="url(#linearGradient-2)" fill-rule="evenodd" xlink:href="#path-3"></use>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <vendor-types class="vendor-type--additional" :specialities="$store.state.specialities"></vendor-types>
+
+
+                <div class="tab-block tab-block--login">
+                    <div class="tab-block__item">
+                        <h1 class="title">Начини свою жизнь
+                        </h1>
+                        <h2 class="title title--h2">Войти через социальные сети
+
+                        </h2>
+                    <nav class="social social--rounded">
+
+                        <ul class="social__list">
+                            <li class="social__item social__item--fb" @click="loginFb"><a href="#">Войти через Facebook</a></li>
+                            <li class="social__item social__item--vk" @click="loginVk"><a href="#" >Войти через Вконтакте</a></li>
+                        </ul>
+                    </nav>
+                        <transition name="fade" v-if="failedClientLogin">
+                            <div class="error-message" >
+                                Не удалось войти. <br>
+                                Пожалуйста, проверьте правильность заполнения логина и пароля.
+                            </div>
+                        </transition>
+                    <div class="delimiter"><span>Или</span></div>
+                    <form action="" class="form form--new" @submit.prevent="loginClient">
+                        <div class="form__input-holder">
+                            <input type="text"
+                                   class="form__input input input--login input--fillable"
+                                   :class="{'form__input--filled': clientData.email.length > 0}"
+                                   v-model="clientData.email"/>
+                            <span class="form__input-placeholder">Логин/e-mail</span>
+                        </div>
+
+                        <div class="form__input-holder">
+                            <input type="password"
+                                   class="form__input input input--login input--fillable"
+                                   :class="{'form__input--filled': clientData.password.length > 0}"
+                                   v-model="clientData.password"/>
+                            <span class="form__input-placeholder">Пароль</span></div>
+                        <div class="form__button-holder">
+                            <div class="form__button button button--white"  @click="startClientRegistration">Регистрация</div>
+                            <button class="form__button button button--aqua">Войти</button>
+                        </div>
+
+                    </form>
+                    <div @click="showVendorRecovery = true;" class="link link--black link--left">Забыли пароль?</div>
+
+                </div>
+                    <!--<div class="tab-block__item" v-if="openedTab === 'vendor'">-->
+                        <!--<nav class="social social&#45;&#45;client">-->
+                            <!--<ul class="social__list">-->
+                                <!--&lt;!&ndash;<li class="social__item social__item&#45;&#45;google"><a href="#">Войти через Google</a></li>&ndash;&gt;-->
+                                <!--&lt;!&ndash;<li class="social__item social__item&#45;&#45;fb"><a href="#">Войти через Facebook</a></li>&ndash;&gt;-->
+                                <!--&lt;!&ndash;<li class="social__item social__item&#45;&#45;vk"><a href="#" @click.prevent="loginVk">Войти через Вконтакте</a></li>&ndash;&gt;-->
+                                <!--&lt;!&ndash;<li class="social__item social__item&#45;&#45;ok"><a href="#">Войти через Одноклассники</a></li>&ndash;&gt;-->
+                            <!--</ul>-->
+                        <!--</nav>-->
+                        <!--<transition name="fade" v-if="failedVendorLogin">-->
+                        <!--<div class="error-message" >-->
+                            <!--Не удалось войти. <br>-->
+                            <!--Пожалуйста, проверьте правильность заполнения логина и пароля.-->
+                        <!--</div>-->
+                        <!--</transition>-->
+                        <!--&lt;!&ndash;<transition name="fade" v-else-if="confirmMail">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<div class="error-message">&ndash;&gt;-->
+                                <!--&lt;!&ndash;Вы должны подтвердить свою почту&ndash;&gt;-->
+                            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</transition>&ndash;&gt;-->
+                        <!--<form action="" class="form form&#45;&#45;login form&#45;&#45;auth" @submit.prevent="loginVendor">-->
+                            <!--<div class="form__input-holder">-->
+                                <!--<input type="text"-->
+                                       <!--class="form__input input input&#45;&#45;login input&#45;&#45;fillable"-->
+                                       <!--:class="{'form__input&#45;&#45;filled': vendorData.email.length > 0}"-->
+                                       <!--v-model="vendorData.email"/>-->
+                                <!--<span class="form__input-placeholder">Логин/e-mail</span>-->
+                            <!--</div>-->
+                            <!--<div class="form__input-holder">-->
+                                <!--<input type="password"-->
+                                       <!--class="form__input input input&#45;&#45;login input&#45;&#45;fillable"-->
+                                       <!--:class="{'form__input&#45;&#45;filled': vendorData.password.length > 0}"-->
+                                       <!--v-model="vendorData.password"/>-->
+                                <!--<span class="form__input-placeholder">Пароль</span>-->
+                            <!--</div>-->
+                            <!--<button class="form__button button button&#45;&#45;violet button&#45;&#45;filter">Войти</button>-->
+                        <!--</form>-->
+                        <!--<div @click="showVendorRecovery = true;" class="link link&#45;&#45;black link&#45;&#45;wide">Забыли пароль?</div>-->
+                        <!--<div  @click="startVendorRegistration" class="link link&#45;&#45;black link&#45;&#45;wide">Регистрация</div>-->
+                    <!--</div>-->
+                    </div>
+
+            </main>
+        </div>
+        <page-footer></page-footer>
+    </div>
+</template>
+
+<script>
+    import PageHeader from '~/components/PageHeader/PageHeader.vue';
+    import PageFooter from '~/components/PageFooter.vue';
+    import VendorTypes from "~/components/FilterElements/CatalogVendorType.vue";
+    import vendorRecoveryPass from '~/components/Login/RecoveryPassword.vue';
+
+    export default {
+//        middleware: ['auth'],
+        components: {
+            'page-header': PageHeader,
+            'page-footer': PageFooter,
+            'vendor-recovery': vendorRecoveryPass,
+            'vendor-types': VendorTypes
+        },
+        data() {
+            return {
+                showVendorRecovery: false,
+                clientData: {
+                    email: '',
+                    password: '',
+                    type: 'client'
+                },
+                failedVendorLogin: false,
+                failedClientLogin: false,
+                confirmMail: false,
+                confirmText: '',
+            vendorData: {
+                    email: '',
+                    password: '',
+                    type: 'vendor'
+                },
+                openedTab: "vendor"
+            }
+        },
+        methods: {
+            handleClosePopup(data) {
+                this.showVendorRecovery = data;
+            },
+            startVendorRegistration() {
+                if(window) {
+                    window.yaCounter48643421.reachGoal('click_on_first_registration');
+                }
+                this.$ga.event({
+                    eventCategory: 'click_on_first_registration',
+                    eventAction: 'click',
+                    eventLabel: 'start reg vendor',
+                })
+                this.$router.push({path: `/registration/${this.openedTab}/`});
+            },
+            startClientRegistration() {
+                if(window) {
+                    window.yaCounter48643421.reachGoal('click_on_first_registration_client');
+                }
+                this.$ga.event({
+                    eventCategory: 'click_on_first_registration_client',
+                    eventAction: 'click',
+                    eventLabel: 'start reg client',
+                })
+                this.$router.push({path: `/registration/vendor/`});
+            },
+            loginFb() {
+                window.location.href = 'https://www.facebook.com/v3.2/dialog/oauth?client_id=174996990114583&redirect_uri=https://nachinka.me/auth/social/fb/&response_type=token&scope=public_profile%2Cemail';
+                // this.$axios({
+                //     method: 'post',
+                //     url: 'https://www.facebook.com/dialog/oauth',
+                //     data: {
+                //         client_id: '174996990114583',
+                //         response_type: 'code',
+                //         redirect_uri: 'https://nachinka.me/auth/social/fb/',
+                //         scope: ''
+                //     },
+                // }).then((response) => {
+                //     let parseUrl = response.data.redirect;
+                //     window.location.href = parseUrl;
+                // })
+            },
+            loginVk() {
+                if(window) {
+                    window.yaCounter48643421.reachGoal('click_on_vk_registration');
+                }
+                this.$ga.event({
+                    eventCategory: 'click_on_vk_registration',
+                    eventAction: 'click'
+                })
+                this.$axios({
+                    method: 'post',
+                    url: '/api/social/auth',
+                    data: {
+                        social: 'vk'
+                    },
+                }).then((response) => {
+                    let parseUrl = response.data.redirect;
+                    window.location.href = parseUrl;
+                })
+            },
+
+            loginVendor() {
+                this.error = null;
+                if (this.confirmMail) {
+                    this.confirmMail = false;
+                }
+                return this.$auth.loginWith('local', {
+                    data: {
+                        email: this.vendorData.email,
+                        password: this.vendorData.password
+                    }
+                }).then(res => {
+                    this.$router.push('/cabinet/');
+                }).catch(e => {
+                    this.failedVendorLogin = true;
+                    this.error = e + '';
+                })
+            },
+            loginClient() {
+                this.error = null;
+                return this.$auth.login({
+                    data: {
+                        email: this.clientData.email,
+                        password: this.clientData.password
+                    }
+                }).then((response) => {
+                    this.$router.push('/cabinet/');
+                }).catch(e => {
+                        this.failedClientLogin = true;
+                        this.error = e + '';
+                    })
+            },
+        },
+        created() {
+            console.log('login', this.$route);
+        },
+        mounted() {
+
+            // yaCounter48643421.reachGoal('click_on_vk_registration');
+            // yaCounter48643421.reachGoal('click_on_first_registration');
+            // yaCounter48643421.reachGoal('click_on_first_registration_client');
+            if (this.$route.query.type) {
+                setTimeout(() => {
+                    this.openedTab = this.$route.query.type;
+                }, 500)
+            }
+        }
+    }
+</script>

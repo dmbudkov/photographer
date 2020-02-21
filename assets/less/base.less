@@ -1,0 +1,130 @@
+html {
+  min-height: 100%;
+  position: relative;
+  overflow: -moz-scrollbars-none;
+  //height: 100%;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+input[type=text],
+input[type=tel],
+{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+body {
+  font-family: 'Rubik', 'Arial', sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  min-height: 100%;
+  height: 100%;
+  //background-image: url('./static/img/back.jpg');
+  //background-repeat: no-repeat;
+  //background-size: cover;
+  //position: relative;
+}
+.no-scroll{
+  position:fixed;
+  overflow:hidden;
+}
+
+@media (min-width: 767px) {
+  .no-scroll {
+    position: relative;
+  }
+}
+
+
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+.wrapper {
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  transition: none;
+  overflow-x: hidden;
+  //max-width: 414px;
+  margin-left: auto;
+  margin-right: auto;
+  &--visible {
+    visibility: visible;
+    opacity: 1;
+    transition: all .4s ease-in;
+    transition-delay: .4s;
+  }
+}
+@media (min-width: 767px) {
+  #app-holder:not(.cabinet-page) {
+    //max-width: 375px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .wrapper {
+    overflow-x: scroll;
+  }
+}
+.page-wrapper {
+  flex: 1 0 auto;
+  overflow-x: hidden;
+  &--date-opened {
+    z-index: 1000;
+    position: relative;
+    //overflow: hidden;
+  }
+  &--sub {
+    background-image: linear-gradient(122deg, #A702FF 0%, #527CEA 100%);
+    background-position: 0 50%;
+    background-size: 160%;
+    animation-name: Gradient;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+  }
+}
+
+@media (min-width: 1023px) {
+  .page-wrapper:not(.page-wrapper--main) {
+    background-color: #f8f8f8;
+  }
+}
+
+.fixed-element {
+  position: fixed;
+}
+img,
+button {
+  outline: 0;
+  border: none;
+}
+.lock-scroll {
+  overflow: hidden;
+}
+.relative {
+  position: relative;
+}
+.clearfix {
+  content: '';
+  display: table;
+  clear: both;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,54 @@
+.calendar-action {
+  position: fixed;
+  padding: 20px 45px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 100;
+  transition: .3s ease;
+  &__item {
+    height: 50px;
+    width: 100%;
+    margin-right: 10px;
+    text-align: center;
+    transition: .3s ease;
+    &--normal {
+      max-width: 100px;
+    }
+    &--hot {
+      max-width: 100px;
+      font-weight: 500;
+      font-size: 14px;
+      color: #FFFFFF;
+      letter-spacing: 0;
+      line-height: 50px;
+    }
+    &--remove {
+      width: 60px;
+      min-width: 44px;
+      height: 50px;
+      margin-left: 0;
+      background-image: url('/app-icons/icon__basket.svg');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: center;
+    }
+  }
+
+}
+
+@media screen and (min-width: 1023px) {
+  .calendar-action {
+    width: 1000px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-500px, 0);
+    height: 140px;
+    padding: 45px;
+    box-shadow: 0 5px 20px 0 rgba(218,228,241,0.40);
+  }
+}

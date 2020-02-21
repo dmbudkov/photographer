@@ -1,0 +1,30 @@
+.filter-results {
+  display: flex;
+  flex-direction: column;
+  &__list {
+    margin-bottom: 30px;
+  }
+  &__item {
+
+  }
+  &__item:first-of-type {
+    box-shadow: 0 -8px 16px 0 rgba(218,228,241,0.30);
+  }
+  &__show-more {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    text-align: center;
+    display: inline-block;
+    min-width: 240px;
+    margin-bottom: 48px;
+  }
+}
+
+@media (min-width: 1023px) {
+  .filter-results {
+    &__item:first-of-type {
+      box-shadow: none;
+    }
+  }
+}

@@ -1,0 +1,132 @@
+.search-page {
+  position: relative;
+  &__input-holder {
+    position: relative;
+    margin-bottom: 25px;
+  }
+  &__results {
+    margin-bottom: 70px;
+  }
+  &__tip {
+    font-size: 14px;
+    line-height: 24px;
+    color: fade(#333, 30%);
+    position: relative;
+    text-align: center;
+    width: 100%;
+    top: 100%;
+    margin-top: 60px;
+    margin-bottom: 70px;
+    left: 0;
+  }
+  &__closer {
+    width: 45px;
+    height: 50px;
+    position: relative;
+    cursor: pointer;
+    position: absolute;
+    right: 7px;
+    top: 50%;
+    margin-top: -25px;
+    display: block;
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -2px;
+      margin-left: -8px;
+      display: block;
+      width: 16px;
+      height: 2px;
+      background-color: #889FBC;
+      transform: rotate(45deg);
+    }
+    &::before {
+      transform: rotate(-45deg);
+    }
+  }
+  &__empty {
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    &-button {
+      display: block;
+      max-width: 250px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &-text {
+      font-size: 14px;
+      line-height: 24px;
+      font-weight: 400;
+      color: #333;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (min-width: 1023px) {
+  .search-page {
+    max-width: 1000px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 120px;
+    background: #FFFFFF;
+    box-shadow: 0 8px 16px 0 rgba(218,228,241,0.40);
+    border-radius: 5px;
+    margin-top: 40px;
+    &__tip {
+      display: block;
+      position: absolute;
+      text-align: left;
+      margin-top: 20px;
+      margin-bottom: 0;
+      left: 40px;
+    }
+    &__input {
+      height: 75px;
+      background-color: #fff;
+      border: none;
+      font-size: 24px;
+      line-height: 26px;
+      padding-left: 40px;
+      font-weight: 300;
+      box-shadow: none;
+    }
+    &__input-holder {
+      margin-bottom: 0;
+    }
+    &__closer {
+      width: 70px;
+      right: 15px;
+    }
+    &__results {
+      margin-top: 0;
+      margin-bottom: 0;
+
+
+    }
+    &__empty {
+      text-align: left;
+      font-size: 14px;
+      line-height: 24px;
+      max-width: 100%;
+      padding-top: 30px;
+      padding-bottom: 50px;
+      padding-left: 40px;
+      padding-right: 40px;
+      &-text {
+        text-align: left;
+        max-width: 450px;
+      }
+      &-button {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+}

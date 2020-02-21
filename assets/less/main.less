@@ -1,0 +1,228 @@
+.main {
+  position: relative;
+  z-index: 11;
+  &--date-opened {
+    z-index: 1000;
+    //overflow: hidden;
+  }
+  &--reg {
+    z-index: 1000;
+  }
+  &__logo-pie {
+    width: 268px;
+    height: 190px;
+    background-image: url(/app-icons/pic__logo-pie.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0 0;
+  }
+  &__container {
+    margin-top: 85px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    color: #fff;
+    h1 {
+      font-size: 28px;
+      line-height: 28px;
+      font-weight: 500;
+      margin-bottom: 40px;
+      padding-top: 95px;
+      background-image: url(/app-icons/icon__404.svg);
+      background-repeat: no-repeat;
+      background-position: center 0;
+      background-size: 180px 70px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+      margin-bottom: 40px;
+    }
+    &-button {
+      margin-left: auto;
+      margin-right: auto;
+      width: auto;
+      text-align: center;
+      display: inline-block;
+      min-width: 240px;
+      margin-bottom: 110px;
+    }
+  }
+  &__background {
+    //background-image: linear-gradient(-46deg, #01F8A2 0%, #057EDD 100%);
+    background-image: linear-gradient(45deg, #02d8ad, #8334f6, #bb3d8b);
+    background-size: 800% 800%;
+    height: 150px;
+    overflow: hidden;
+    margin-top: -100px;
+    background-position: 0 50%;
+    animation-name: Gradient;
+    animation-duration: 21s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    &--short {
+      height: 100px;
+      overflow: hidden;
+    }
+  }
+  &--popup-opened {
+    z-index: 1000;
+  }
+  &--index {
+    &__background--short {
+      height: 190px;
+      overflow: visible;
+    }
+  }
+  &__logo {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 190px;
+  }
+  &--overlay {
+    z-index: 110000;
+  }
+
+}
+
+@media (min-width: 767px) {
+  .main {
+    &--popup-opened {
+      z-index: 1;
+    }
+    &__background--short {
+      height: 100px;
+      overflow: hidden;
+    }
+    &--index {
+      background-color: #f8f8f8;
+      .main__background {
+        height: 190px;
+      }
+    }
+
+  }
+  .cabinet-page {
+    .main {
+
+      &__background {
+        display: none;
+        height: 80px;
+        margin-top: -80px;
+        background-image: linear-gradient(5deg, #01F8A2 0%, #057EDD 100%);
+      }
+      //&__logo {
+      //  svg {
+      //    width: 700px;
+      //    height: 1000px;
+      //    transform: translateY(-400px);
+      //  }
+      //}
+      &--reg {
+        z-index: 100;
+      }
+      &--overlay {
+        z-index: 110000;
+      }
+    }
+  }
+  .main {
+    &--overlay {
+      z-index: 110000;
+    }
+  }
+}
+
+@media (min-width: 1023px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    &__container {
+      margin-top: 196px;
+    }
+    &__detail-holder {
+      margin-left: auto;
+      margin-right: auto;
+      width: 1000px;
+      padding-left: 340px;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 60px;
+      position: relative;
+      margin-top: -190px;
+      min-height: 1000px;
+      padding-top: 190px;
+      border-radius: 5px;
+      overflow: hidden;
+      z-index: 1;
+      &::after {
+        content: '';
+        position: absolute;
+        top: 190px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: block;
+        width: 100%;
+        height: auto;
+        background-color: #fff;
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 2;
+        display: block;
+        width: 340px;
+        height: 100%;
+        box-shadow: 0 8px 16px 0 rgba(218,228,241,0.40);
+      }
+    }
+    &--404 {
+      height: calc(~'100vh - 120px');
+      .main__container {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        margin-top: -120px;
+        h1 {
+          font-size: 62px;
+          max-width: 448px;
+          line-height: 70px;
+          margin-bottom: 30px;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 0;
+          padding-top: 0;
+          padding-right: 212px;
+          background-position: right center;
+          background-size: 181px 70px;
+        }
+        p {
+
+        }
+        &-button {
+
+        }
+      }
+    }
+    &--index {
+      .main__background {
+        height: 100px;
+        overflow: hidden;
+      }
+    }
+    &--reg {
+      z-index: 19;
+    }
+
+  }
+}

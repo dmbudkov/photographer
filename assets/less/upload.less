@@ -1,0 +1,23 @@
+.upload {
+  border-radius: 50%;
+  box-shadow: 0 25px 70px 0 rgba(0,0,0,0.10);
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  cursor:  pointer;
+  background-color: #02CFB6;
+  background-image: url('/app-icons/icon__upload.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+@media (min-width: 767px) {
+  .upload {
+
+    &--profile {
+      background-image: url('/app-icons/icon__pencil.svg');
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

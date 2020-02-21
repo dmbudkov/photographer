@@ -1,0 +1,59 @@
+.hot-date {
+  padding-left: 40px;
+
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    //background-color: #734CF2;
+    background-image: url('/app-icons/icon__hot.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  &__date {
+    display: block;
+    font-weight: 700;
+    font-size: 11px;
+    padding-top: 3px;
+    color: #734CF2;
+    letter-spacing: 0;
+    line-height: 11px;
+    margin-bottom: 3px;
+    text-transform: uppercase;
+  }
+  &__descr {
+    display: block;
+    font-weight: 400;
+    font-size: 11px;
+    color: #734CF2;
+    letter-spacing: 0;
+    line-height: 11px;
+  }
+  &--catalog {
+    padding-left: 32px;
+    &::after {
+      width: 24px;
+      height: 24px;
+      top: 50%;
+      margin-top: -12px;
+    }
+  }
+}
+@media (min-width: 1023px) {
+  .hot-date {
+    &__date {
+      font-size: 12px;
+      line-height: 12px;
+    }
+    &__descr {
+      font-size: 12px;
+      line-height: 12px;
+    }
+  }
+}

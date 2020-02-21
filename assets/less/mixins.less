@@ -1,0 +1,6 @@
+.icon-stroke(@src, @color) {
+  @data-uri: data-uri('image/svg+xml;charset=UTF-8', "@{src}");
+  @replace-src: replace("@{data-uri}", "stroke\%3D\%22\%23[\w]{3,6}\%22", escape('stroke="@{color}"'), "gi");
+  @replace-src-final: replace("@{replace-src}", "fill\%3D\%22\%23[\w]{3,6}\%22", escape('fill="@{color}"'), "gi");
+  background-image:e(@replace-src-final);
+}

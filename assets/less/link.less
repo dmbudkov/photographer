@@ -1,0 +1,77 @@
+.link {
+  font-weight: 500;
+  font-size: 14px;
+  color: #02CFB6;
+  background-color: transparent;
+  letter-spacing: 0;
+  line-height: 14px;
+  position: relative;
+  padding-right: 13px;
+  margin-bottom: 15px;
+  display: inline-block;
+  cursor: pointer;
+  &::before {
+    content: '';
+    display: block;
+    width: 9px;
+    height: 9px;
+    border-top: 3px solid #02CFB6;
+    border-left: 3px solid #02CFB6;
+    transform: rotate(135deg);
+    position: absolute;
+    top: 3px;
+    right: 0;
+
+  }
+  &--aqua {
+    font-size: 11px;
+    line-height: 16px;
+    padding-right: 0;
+    &::before {
+      display: none;
+    }
+  }
+  &--black {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    color: #333333;
+    letter-spacing: 0;
+    line-height: 50px;
+    border-bottom: 1px solid #edf1f5;
+    max-width: 245px;
+    &::before {
+      display: none;
+    }
+  }
+  &--left {
+    text-align: left;
+    line-height: 40px;
+    max-width: none;
+  }
+  &--wide {
+    padding-right: 0;
+  }
+  &--main {
+    margin-bottom: 25px;
+  }
+  &--black:last-child {
+    border-bottom: none;
+  }
+  &--gray {
+    color: #889FBC;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+  }
+}
+@media (min-width: 1023px) {
+  .link {
+    &::before {
+      display: none;
+    }
+  }
+}

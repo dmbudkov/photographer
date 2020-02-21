@@ -1,0 +1,12 @@
+stages:
+- build
+
+build:
+  stage: build
+  script:
+    - cd ..
+    - rm -rf /var/www/frontend/ui
+    - cp -a ui/ /var/www/frontend/
+    - cd /var/www/frontend/ui/ && npm install && npm run build
+    - pm2 stop ui && pm2 delete all
+    - pm2 start npm --name ui -- start

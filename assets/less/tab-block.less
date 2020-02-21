@@ -1,0 +1,228 @@
+.tab-block {
+  display: flex;
+  flex-direction: column;
+  &__item--relative {
+    position: relative;
+  }
+  &__description {
+    white-space: pre-wrap;
+    &--rolled {
+      overflow: hidden;
+      height: 70px;
+      transition: height .3s ease;
+    }
+  }
+  &__full {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 110;
+    overflow: hidden;
+    background-image: linear-gradient(132deg, #8335F6 0%, #5479EA 100%);
+  }
+  &__full-text {
+    margin-top: 115px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: 24px;
+    max-width: 245px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 23px;
+  }
+  &__fixed-item {
+    position: fixed;
+    bottom: 80px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 100;
+    button {
+      max-width: 200px;
+      width: 100%;
+    }
+  }
+  &__fixed-item--cabinet {
+    z-index: 10;
+  }
+  &__full-button {
+    max-width: 140px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  &__item {
+    padding: 30px 25px;
+    background-color: #f8f8f8;
+    position: relative;
+    p {
+      font-weight: 400;
+      font-size: 14px;
+      color: #333333;
+      letter-spacing: 0;
+      line-height: 24px;
+      margin-bottom: 20px;
+    }
+    &-button {
+      margin-top: auto;
+      width: 100%;
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 30px;
+      text-align: center;
+      &--white {
+        background-color: #fff;
+      }
+      button {
+        max-width:  246px;
+        width: 100%;
+        display: inline-block;
+        font-weight: 500;
+        font-size: 14px;
+        height: 50px;
+        line-height: 50px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+      }
+    }
+  }
+
+  &--login,
+  &--vendor-card {
+    .tab-block__item {
+      background-color: #fff;
+    }
+  }
+  &--vendor-card {
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      margin-left: -25px;
+      margin-right: -25px;
+      right: 0;
+      top: -8px;
+      height: 5px;
+      background-color: #fff;
+    }
+  }
+  &--cabinet,
+  &--tenders {
+    min-height: calc(~'100vh - 160px');
+    .tab-block__item {
+      padding: 0;
+      flex-grow: 1;
+    }
+  }
+}
+//@media(min-width: 767px) and (max-width: 1023px) {
+//  .tab-block {
+//    &--cabinet {
+//      margin-top: 190px;
+//    }
+//  }
+//}
+@media (min-width: 1023px) {
+  .tab-block {
+    &__posts {
+      margin-bottom: 80px;
+      position: relative;
+      padding-bottom: 70px;
+    }
+    &__item--profile {
+      display: flex;
+      flex-direction: column;
+        //.form {
+        //  order: 1;
+        //}
+        //.events {
+        //  order: 2;
+        //}
+
+    }
+    &__item-button--posts {
+      position: absolute;
+      bottom: 0;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      //left: 50%;
+      //margin-left: -400px;
+      box-shadow: 0 5px 20px 0 rgba(218,228,241,0.40);
+    }
+    &__item-button--events {
+      position: relative;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 5px 20px 0 rgba(218,228,241,0.40);
+      padding: 45px;
+    }
+    &__fixed-item {
+      position: relative;
+      left: auto;
+      right: auto;
+      bottom: auto;
+    }
+    &--login {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 800px;
+      width: 100%;
+      background-color: #fff;
+      position: relative;
+      margin-top: 30px;
+      //&::after {
+      //  content: '';
+      //  position: absolute;
+      //  left: 0;
+      //  right: 0;
+      //  bottom: 0;
+      //  height: calc(~'100% + 165px');
+      //  display: block;
+      //  width: 100%;
+      //  z-index: -1;
+      //  box-shadow: 0 8px 16px 0 rgba(218,228,241,0.40);
+      //  border-radius: 5px;
+      //
+      //}
+      .tab-block__item {
+        width:  360px;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 40px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .link--black {
+        margin-bottom: 0;
+      }
+    }
+    &--vendor-card {
+      z-index: 1;
+    }
+    &__description {
+      padding-left: 5px;
+      padding-right: 5px;
+      transition: height .3s ease;
+
+
+    }
+
+    &--tenders,
+    &--chat {
+
+      margin-bottom: 100px;
+    }
+
+  }
+}

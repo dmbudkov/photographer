@@ -1,0 +1,133 @@
+.tender-banner {
+  position: relative;
+  background-image: linear-gradient(-27deg, #03c5bb, #04adc6);
+  min-height: 512px;
+  overflow: hidden;
+  cursor: pointer;
+    &__holder {
+      padding-top: 328px;
+      color: #ffffff;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      max-width: 300px;
+      &::after {
+        content: '';
+        position: absolute;
+        background-image: url(~/static/tender-banner-mobile.png);
+        display: block;
+        top: -7px;
+        left: 50%;
+        margin-left: -150px;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 300px;
+        height: 285px;
+        //margin-left: auto;
+        //margin-right: auto;
+        background-size: 100%;
+      }
+    }
+    &__title {
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+    &__text {
+      font-size: 14px;
+      line-height: 16px;
+      margin-bottom: 30px;
+    }
+    &__button {
+      max-width: 200px;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 5px;
+      height: 50px;
+      background-color: #fff;
+      color: #000;
+      font-size: 14px;
+      line-height: 50px;
+    }
+    &--filter {
+      //display: none;
+    }
+  }
+@media (min-width: 1024px) {
+  .tender-banner {
+    height: 360px;
+    min-height: auto;
+    overflow: visible;
+    &__title {
+      font-size: 32px;
+      line-height: 40px;
+    }
+    &__text {
+      font-size: 14px;
+      line-height: 21px;
+      margin-bottom: 30px;
+      max-width: 430px;
+    }
+    &__button {
+      margin-left: 0;
+    }
+    &__holder {
+      max-width: 980px;
+      text-align: left;
+      padding-top: 105px;
+      position: relative;
+      &::after {
+        background-image: url(~/static/tender-banner-desktop.png);
+        width: 650px;
+        height: 450px;
+        top: 20px;
+        right: -160px;
+        margin-left: auto;
+        left: auto;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+      }
+    }
+    &--filter {
+      display: block;
+      padding-left: 30px;
+      padding-right: 30px;
+      height: 310px;
+      padding-top: 70px;
+      .tender-banner__holder {
+        padding-top: 0;
+        text-align: right;
+        &::after {
+          background-image: url(~/static/banner-tender.png);
+          width: 520px;
+          height: 275px;
+          left: -7px;
+          top: -50px;
+          right: auto;
+        }
+      }
+      .tender-banner__text,
+      .tender-banner__title,
+      .tender-banner__button {
+        max-width: 220px;
+        margin-left: auto;
+        margin-right: 0;
+      }
+      .tender-banner__title {
+        font-size: 20px;
+        line-height: 24px;
+        text-align: left;
+      }
+      .tender-banner__text {
+        font-size: 14px;
+        line-height: 16px;
+        text-align: left;
+      }
+
+    }
+  }
+
+}

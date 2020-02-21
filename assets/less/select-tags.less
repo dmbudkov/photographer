@@ -1,0 +1,42 @@
+.select-tags {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  &--required {
+    .select-tags__item {
+      label {
+        border-bottom: 2px solid #FF4A61;
+      }
+    }
+  }
+  &__item {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  &--filter {
+    flex-wrap: nowrap;
+    height: 40px;
+    margin-bottom: 15px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+
+    .select-tags__item {
+      width: auto;
+    }
+    .select-tags__item:first-of-type {
+      //padding-left: 20px;
+      margin-left: 25px;
+    }
+    .select-tags__item:last-of-type {
+      padding-right: 20px;
+      margin-right: 20px;
+    }
+  }
+  &--wide {
+    flex-direction: column;
+    .select-tags__item {
+      margin-right: 0;
+    }
+  }
+}

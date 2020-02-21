@@ -1,0 +1,111 @@
+@charset "utf-8";
+.button {
+  box-shadow: 0 8px 16px 0 rgba(67,36,149,0.10);
+  border-radius: 10px;
+  height: 60px;
+  //width: 100%;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  line-height: 60px;
+  cursor: pointer;
+  &--violet {
+    background-image: linear-gradient(132deg, #A702FF 0%, #5775EB 100%);
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: 50px;
+    height: 50px;
+
+  }
+  &--filter {
+    font-weight: 500;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: 50px;
+    height: 50px;
+  }
+  &--main {
+    height: 70px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 70px;
+    max-width: 325px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &--aqua {
+    font-weight: 500;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: 50px;
+    background: #02CFB6;
+    box-shadow: 0 8px 16px 0 rgba(0, 175, 154, 0.15);
+    border-radius: 5px;
+    height: 50px;
+  }
+  &--gray {
+    height: 50px;
+    background: #C3CFDD;
+    box-shadow: 0 8px 16px 0 rgba(218,228,241,0.40);
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: 50px;
+  }
+  &--white {
+    height: 50px;
+    font-size: 14px;
+    line-height: 50px;
+    border-radius: 5px;
+    color: #333;
+    border: 1px solid #c4cfde;
+    box-shadow: none;
+  }
+  &--drop {
+    position: relative;
+    &::after {
+      content: 'Добавить фото';
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      font-weight: 400;
+      font-size: 14px;
+      color: #FFFFFF;
+      line-height: 50px;
+      height: 100%;
+      text-align: center;
+    }
+  }
+  &--date {
+    background-image: url(/app-icons/icon-detail__calendar.svg);
+    background-repeat: no-repeat;
+    background-position: 48px center;
+    text-align: left;
+    height: 55px;
+    line-height: 55px;
+    //padding-left: 80px;
+    text-align: center;
+    background-size: 24px 24px;
+  }
+}
+
+@media (min-width: 1023px) {
+  .button {
+    &--main {
+      max-width: 320px;
+    }
+  }
+}

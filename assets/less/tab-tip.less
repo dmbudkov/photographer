@@ -1,0 +1,207 @@
+.tab-tip {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: fade(#000000, 70%);
+  padding-top: 110px;
+  &__inner {
+    position: relative;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  &__arrow {
+  }
+  &__text {
+    //position: absolute;
+    padding-top: 130px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: 24px;
+    margin-bottom: 15px;
+  }
+  &__slot {
+    visibility: visible;
+    will-change: auto;
+    text-align: center;
+    background-color: #fff;
+    position: absolute;
+    cursor: pointer;
+    top: 57px;
+    right: 35px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #333333;
+    letter-spacing: 0;
+    line-height: 45px;
+    height: 45px;
+    width: 45px;
+    border: 1px solid #f2f2f2;
+    &::after {
+      content: '';
+      position: absolute;
+      left: -250px;
+      top: -60px;
+      display: block;
+      width: 215px;
+      margin-left: 25px;
+      height: 133px;
+      background-image: url('/app-icons/icon__tip-arrow.svg');
+      background-repeat: no-repeat;
+      background-size: 303px 205px;
+      background-position: center;
+    }
+  }
+  &__button {
+    max-width: 141px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+  }
+  &--tenders {
+    padding-top: 104px;
+    .tab-tip__inner {
+      padding-left: 60px;
+
+    }
+    .tab-tip__text {
+      padding-top: 245px;
+    }
+    .tab-tip__focus {
+
+      font-size: 14px;
+      line-height: 40px;
+      font-weight: 500;
+      padding-left: 45px;
+      padding-right: 15px;
+      padding-top: 8px;
+      height: 56px;
+      width: 186px;
+      border-radius: 5px;
+      position: absolute;
+      top: 56px;
+      right: 0;
+      cursor: pointer;
+      background-color: #fff;
+      //position: absolute;
+      //right: 0;
+      //top: 0;
+      //background-image: url(/static/app-icons/.svg);
+      &::after {
+        content: '';
+        position: absolute;
+        left: -135px;
+        top: 42px;
+        display: block;
+        width: 215px;
+        margin-left: 25px;
+        height: 133px;
+        background-image: url('/app-icons/icon__tender-arrow.svg');
+        background-repeat: no-repeat;
+        background-size: 303px 205px;
+        background-position: center;
+      }
+      &-icon {
+        position: absolute;
+        left: 0px;
+        top: 8px;
+        display: block;
+        width: 40px;
+        height: 40px;
+        &::after,
+        &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-top: -2px;
+          margin-left: -8px;
+          display: block;
+          width: 16px;
+          height: 2px;
+          background-color: #889FBC;
+          //transform: rotate(45deg);
+        }
+        &::before {
+          transform: rotate(-90deg);
+        }
+      }
+    }
+  }
+}
+@media (min-width: 767px) {
+  .tab-tip {
+    &--tenders {
+      padding-top: 88px;
+      .tab-tip__inner {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .tab-tip__text {
+        margin-left: 50%;
+      }
+    }
+  }
+}
+
+@media (min-width: 1023px) {
+  .tab-tip {
+    padding-top: 187px;
+    &__inner {
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    &__slot {
+      width: 40px;
+      height: 38px;
+      line-height: 38px;
+      left: 15px;
+      top: 45px;
+      &::after {
+        transform: scale(-1, 1);
+        right: -230px;
+        top: -52px;
+        left: auto;
+      }
+    }
+    &__text {
+      max-width: 315px;
+      margin-left: 165px;
+      padding-top: 110px;
+    }
+    &--tenders {
+      .tab-tip__inner {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .tab-tip__text {
+        max-width: 315px;
+        margin-left: 315px;
+        padding-top: 80px;
+      }
+      .tab-tip__focus {
+        width: 172px;
+        top: 0;
+        &::after {
+          left: -290px;
+          top: -35px;
+          background-image: url('/app-icons/icon__tip-arrow.svg');
+        }
+      }
+    }
+  }
+
+}
